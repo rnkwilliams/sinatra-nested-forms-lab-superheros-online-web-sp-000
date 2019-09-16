@@ -19,7 +19,7 @@ class App < Sinatra::Base
     
     @team = Team.new(params["team"]["name"], params["team"]["motto"])
     
-    
+    @members = Members.all
       
     erb :team
   end
