@@ -13,7 +13,9 @@ class App < Sinatra::Base
   end
   
   post '/teams' do
-    params["team"]["members"]
+    params["team"]["members"]. each do |member_data|
+      
+      
     erb :team
   end
 end
