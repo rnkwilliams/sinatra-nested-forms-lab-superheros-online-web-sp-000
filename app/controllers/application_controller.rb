@@ -13,11 +13,8 @@ class App < Sinatra::Base
   end
   
   post '/teams' do
-    params["team"]["members"]. each do |member_data|
-      Members.new(member_data["name"], member_data["power"], member_data["bio"])
-    end
-    
-    @team = Team.new(params["team"]["name"], params["team"]["motto"])
+    @team_name = params["team"]["name"]
+    @team_motto = params["team"]["motto"]
     
     @members = Members.all
       
