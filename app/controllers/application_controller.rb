@@ -17,7 +17,9 @@ class App < Sinatra::Base
       Members.new(member_data["name"], member_data["power"], member_data["bio"])
     end
     
-    @team = Team.new(params["team"]["name"],  )
+    @team = Team.new(params["team"]["name"], params["team"]["motto"])
+    
+    
       
     erb :team
   end
